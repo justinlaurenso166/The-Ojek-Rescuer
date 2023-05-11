@@ -15,19 +15,19 @@ public class SpeedoMeter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        speed = target.velocity.magnitude * 3.6f;
+        // speed = target.velocity.magnitude * 3.6f;
 
         // If speedLabel is not 0
         if (speedLabel != null)
         {
             // The speedLabel will take the speed and display it on the screen
-            speedLabel.text = ((int)speed) + "km/h";
+            speedLabel.text = ((int)forklift.currentSpeed) + "km/h";
         }
         // If arrow is not 0
         if (arrow != null)
         {
             // Larp make the arrow move smoothly 
-            arrow.localEulerAngles = new Vector3(0, 0, Mathf.Lerp(minSpeed, maxSpeedAngle, speed / maxSpeed));
+            arrow.localEulerAngles = new Vector3(0, 0, Mathf.Lerp(minSpeed, maxSpeedAngle, forklift.currentSpeed / maxSpeed));
         }
     }
 }

@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
         panelMenang.SetActive(false);
     }
 
-    public void goToAnotherPage(string scene){
+    public void goToAnotherScene(string scene){
         SceneManager.LoadScene(scene);
     }
 

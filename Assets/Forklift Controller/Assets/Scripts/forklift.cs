@@ -33,7 +33,7 @@ public class forklift : MonoBehaviour
     public float torque;
     public float brakeTorque;
     public float maxSteerAngle;
-    public float currentSpeed;
+    public static float currentSpeed;
     public float maxSpeed;
 
     [Header("KeyCodes")]
@@ -197,6 +197,7 @@ public class forklift : MonoBehaviour
         //update texts
         gearText.text = "Gear: " + currentGear;
         // speedText.text = "Speed: " + currentSpeed.ToString("f2") + "Km/h";
+        print(currentSpeed);
     }
 
     private void UpdateWheelPoses()
