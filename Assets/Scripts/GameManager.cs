@@ -12,6 +12,12 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public GameObject panelMenang;
 
+    [Header("Game Menu")]
+    public GameObject panelMenu;
+
+    [Header("Settings")]
+    public GameObject panelSetting;
+
     private void Awake()
     {
         if (instance == null)
@@ -42,10 +48,6 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
             panelMenang.SetActive(true);
         }
-
-        // if(Input.GetKey(KeyCode.E)){
-        //     score = 3;
-        // }
     }
 
     void closePanel()
@@ -55,5 +57,17 @@ public class GameManager : MonoBehaviour
 
     public void goToAnotherPage(string scene){
         SceneManager.LoadScene(scene);
+    }
+
+    public void openSetting()
+    {
+        panelMenu.SetActive(false);
+        panelSetting.SetActive(true);
+    }
+
+    public void closeSetting()
+    {
+        panelSetting.SetActive(false);
+        panelMenu.SetActive(true);
     }
 }
