@@ -196,7 +196,7 @@ public class forklift : MonoBehaviour
 
         //update texts
         gearText.text = "Gear: " + currentGear;
-        speedText.text = "Speed: " + currentSpeed.ToString("f2") + "Km/h";
+        // speedText.text = "Speed: " + currentSpeed.ToString("f2") + "Km/h";
     }
 
     private void UpdateWheelPoses()
