@@ -43,9 +43,9 @@ public class GameManager : MonoBehaviour
             panelMenang.SetActive(true);
         }
 
-        if(Input.GetKey(KeyCode.E)){
-            score = 3;
-        }
+        // if(Input.GetKey(KeyCode.E)){
+        //     score = 3;
+        // }
     }
 
     void closePanel()
