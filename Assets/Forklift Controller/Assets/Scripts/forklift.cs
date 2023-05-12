@@ -43,6 +43,8 @@ public class forklift : MonoBehaviour
     public KeyCode upLoaderKey = KeyCode.O;
     public KeyCode downLoaderKey = KeyCode.L;
 
+    public GameObject speedometer;
+
     [Range(-1, 1)]
     int currentGear = 0;
     bool canEnter = false;
@@ -91,6 +93,7 @@ public class forklift : MonoBehaviour
             cameraExteriorForklift.SetActive(false);
             canEnterText.SetActive(false);
             enter = true;
+            speedometer.SetActive(true);
             inForkliftMenu.SetActive(true);
         }
 
@@ -161,6 +164,7 @@ public class forklift : MonoBehaviour
             FPS.SetActive(true);
             cameraInteriorForklift.SetActive(false);
             cameraExteriorForklift.SetActive(false);
+            speedometer.SetActive(false);
             canEnterText.SetActive(false);
         }
 
