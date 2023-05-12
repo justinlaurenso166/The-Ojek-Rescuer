@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         score = 0;
     }
 
@@ -47,6 +48,11 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 0;
             panelMenang.SetActive(true);
+        }
+
+        if(Input.GetKeyDown(KeyCode.N))
+        {
+            score = 3;
         }
     }
 
@@ -69,5 +75,10 @@ public class GameManager : MonoBehaviour
     {
         panelSetting.SetActive(false);
         panelMenu.SetActive(true);
+    }
+
+    public void retryGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
