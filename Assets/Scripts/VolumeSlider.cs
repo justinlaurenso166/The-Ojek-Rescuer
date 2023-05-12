@@ -11,8 +11,11 @@ public class VolumeSlider : MonoBehaviour
 
     void Start()
     {
+        AudioListener.volume = 0.3f;
+
         // Set the Slider value to the current volume
         volumeSlider.value = AudioListener.volume;
+        SetVolume();
     }
 
     public void SetVolume()
