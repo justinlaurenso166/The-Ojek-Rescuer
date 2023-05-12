@@ -3,6 +3,10 @@ using TMPro;
 
 public class forklift : MonoBehaviour
 {
+    [Header("PLAYER")]
+    public GameObject player;
+    public GameObject playerCamera;
+
     [Header("UI elements")]
     public TextMeshProUGUI gearText;
     public TextMeshProUGUI speedText;
@@ -88,7 +92,9 @@ public class forklift : MonoBehaviour
         if (canEnter == true && Input.GetKeyDown(KeyCode.F) && enter == false)
         {
             //then enter the forklift
-            FPS.SetActive(false);
+            //FPS.SetActive(false);
+            player.SetActive(false);
+            playerCamera.SetActive(false);
             cameraInteriorForklift.SetActive(true);
             cameraExteriorForklift.SetActive(false);
             canEnterText.SetActive(false);
@@ -160,8 +166,11 @@ public class forklift : MonoBehaviour
             //exit the forklift
             inForkliftMenu.SetActive(false);
             enter = false;
-            FPS.transform.position = exitPosition.position;
-            FPS.SetActive(true);
+            //FPS.transform.position = exitPosition.position;
+            //FPS.SetActive(true);
+            player.transform.position = exitPosition.position;
+            player.SetActive(true);
+            playerCamera.SetActive(true);
             cameraInteriorForklift.SetActive(false);
             cameraExteriorForklift.SetActive(false);
             speedometer.SetActive(false);
