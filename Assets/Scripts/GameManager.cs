@@ -10,7 +10,10 @@ public class GameManager : MonoBehaviour
     private static GameManager instance;
     public static int score = 0;
     public TextMeshProUGUI scoreText;
+
+    [Header("Panel Game Selesai")]
     public GameObject panelMenang;
+    public GameObject panelKalah;
 
     [Header("Game Menu")]
     public GameObject panelMenu;
@@ -38,22 +41,27 @@ public class GameManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {  
-        if(scoreText != null)
+    {
+        if (scoreText != null)
         {
             scoreText.text = score.ToString();
         }
 
-        if(score == 3)
+        if (score == 3)
         {
             Time.timeScale = 0;
             panelMenang.SetActive(true);
         }
 
-        if(Input.GetKeyDown(KeyCode.N))
+        if (Input.GetKeyDown(KeyCode.N))
         {
             score = 3;
         }
+    }
+
+    public static GameManager GetInstance()
+    {
+        return instance;
     }
 
     void closePanel()
@@ -61,7 +69,8 @@ public class GameManager : MonoBehaviour
         panelMenang.SetActive(false);
     }
 
-    public void goToAnotherScene(string scene){
+    public void goToAnotherScene(string scene)
+    {
         SceneManager.LoadScene(scene);
     }
 
@@ -80,5 +89,11 @@ public class GameManager : MonoBehaviour
     public void retryGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void timeOver()
+    {
+        Time.timeScale = 0;
+        panelKalah.SetActive(true);
     }
 }
