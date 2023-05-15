@@ -23,6 +23,7 @@ public class PausePanel : MonoBehaviour
     // Method untuk mengaktifkan panel pause dan menghentikan waktu
     public void PauseGame()
     {
+        AudioListener.pause = true;
         Time.timeScale = 0f; // Waktu dihentikan
         pauseMenu.SetActive(true); // Panel pause aktif
     }

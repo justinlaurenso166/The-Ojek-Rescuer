@@ -8,6 +8,7 @@ public class ResumeBtn : MonoBehaviour
     // Method untuk menonaktifkan panel pause dan melanjutkan waktu
     public void ResumeGame()
     {
+        AudioListener.pause = false;
         Time.timeScale = 1f; // Waktu dilanjutkan
         pauseMenu.SetActive(false); // Panel pause dinonaktifkan
     }

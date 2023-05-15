@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        AudioListener.pause = false;
         Time.timeScale = 1;
         score = 0;
     }
@@ -93,7 +94,8 @@ public class GameManager : MonoBehaviour
 
     public void timeOver()
     {
-        Time.timeScale = 0;
+        AudioListener.pause = true;
+        Time.timeScale = 0f;
         panelKalah.SetActive(true);
     }
 }
