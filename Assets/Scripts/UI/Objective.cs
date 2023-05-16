@@ -6,10 +6,10 @@ public class Objective : MonoBehaviour
 {
     public TMP_Text displayText;
     public float displayTime = 5.0f;
-
+    public string text;
     IEnumerator Start()
     {
-        displayText.text = "Selamatkan 3 orang yang terperangkap!";
+        displayText.text = text;
         yield return new WaitForSeconds(displayTime);
         displayText.text = "";
     }

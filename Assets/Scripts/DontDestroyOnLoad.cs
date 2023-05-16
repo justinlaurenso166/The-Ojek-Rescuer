@@ -29,6 +29,10 @@ public class DontDestroyOnLoad : MonoBehaviour
         {
             DestroyMusic();
         }
+        else if (SceneManager.GetActiveScene().name == "Level_1")
+        {
+            DestroyMusic();
+        }
     }
 
 }

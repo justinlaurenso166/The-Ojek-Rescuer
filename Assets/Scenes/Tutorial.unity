@@ -3014,6 +3014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayText: {fileID: 681862661}
   displayTime: 5
+  text: Letakkan 3 Pallet ke atas rak
 --- !u!114 &681862661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5697,7 +5698,7 @@ MonoBehaviour:
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.98
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -5725,7 +5726,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1923742863
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7447,6 +7448,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &5866666020917113599
 MonoBehaviour:
   m_ObjectHideFlags: 0
