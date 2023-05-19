@@ -21,6 +21,7 @@ public class PauseBtn : MonoBehaviour
 
         if (isPaused)
         {
+            Debug.Log("Pause");
             Time.timeScale = 0f; // Menghentikan waktu (pause game)
             pausePanel.SetActive(true); // Menampilkan panel pause
         }
