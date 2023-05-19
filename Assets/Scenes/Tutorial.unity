@@ -399,6 +399,7 @@ GameObject:
   m_Component:
   - component: {fileID: 148201943}
   - component: {fileID: 148201945}
+  - component: {fileID: 148201946}
   m_Layer: 0
   m_Name: Camera Manager
   m_TagString: Untagged
@@ -450,6 +451,18 @@ MonoBehaviour:
   cameraCollisionRadius: 0.2
   cameraCollisionOffset: 0.2
   minCollisionOffset: 0.2
+--- !u!114 &148201946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148201941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70ec4da5d397cbe40b6e1c2d6e12c26f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1916,6 +1929,18 @@ PrefabInstance:
       value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 1944932309064348292, guid: 6cc3c803f3f41d041902f56fc57c0577, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.77019
+      objectReference: {fileID: 0}
+    - target: {fileID: 1944932309064348292, guid: 6cc3c803f3f41d041902f56fc57c0577, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.77019
+      objectReference: {fileID: 0}
+    - target: {fileID: 1944932309064348292, guid: 6cc3c803f3f41d041902f56fc57c0577, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.77019
+      objectReference: {fileID: 0}
+    - target: {fileID: 1944932309064348292, guid: 6cc3c803f3f41d041902f56fc57c0577, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1945,11 +1970,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1944932309064348292, guid: 6cc3c803f3f41d041902f56fc57c0577, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -835
+      value: -837
       objectReference: {fileID: 0}
     - target: {fileID: 1944932309064348292, guid: 6cc3c803f3f41d041902f56fc57c0577, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 400
+      value: 431
       objectReference: {fileID: 0}
     - target: {fileID: 1944932309064348292, guid: 6cc3c803f3f41d041902f56fc57c0577, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2515,7 +2540,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1209090297}
-  - component: {fileID: 1209090298}
   m_Layer: 0
   m_Name: Cursor
   m_TagString: Untagged
@@ -2538,18 +2562,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1209090298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1209090296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70ec4da5d397cbe40b6e1c2d6e12c26f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1371845889
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3790,6 +3802,38 @@ PrefabInstance:
     - target: {fileID: 4583886334617504615, guid: 653907abfd83ce54a873d44eabd81d33, type: 3}
       propertyPath: m_Name
       value: Timer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583886334623489716, guid: 653907abfd83ce54a873d44eabd81d33, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.13515885
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583886334623489716, guid: 653907abfd83ce54a873d44eabd81d33, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.13515885
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583886334623489716, guid: 653907abfd83ce54a873d44eabd81d33, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.13515885
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583886334623489716, guid: 653907abfd83ce54a873d44eabd81d33, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 423
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583886334991378381, guid: 653907abfd83ce54a873d44eabd81d33, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.13515885
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583886334991378381, guid: 653907abfd83ce54a873d44eabd81d33, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.13515885
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583886334991378381, guid: 653907abfd83ce54a873d44eabd81d33, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.13515885
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583886334991378381, guid: 653907abfd83ce54a873d44eabd81d33, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 422.99997
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 653907abfd83ce54a873d44eabd81d33, type: 3}
@@ -5041,6 +5085,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Panel Kalah Waktu Habis
       objectReference: {fileID: 0}
+    - target: {fileID: 4110728772639127193, guid: 3a84f34d1645f2c44a2bf4386e9999e2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4110728773837870439, guid: 3a84f34d1645f2c44a2bf4386e9999e2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -5306,6 +5354,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &5866666020917113599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6229,6 +6278,10 @@ PrefabInstance:
     - target: {fileID: 8415359736771738879, guid: cd5f8be5db01b28479b8dc638f64475a, type: 3}
       propertyPath: m_Name
       value: Panel Menang
+      objectReference: {fileID: 0}
+    - target: {fileID: 8415359736771738879, guid: cd5f8be5db01b28479b8dc638f64475a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd5f8be5db01b28479b8dc638f64475a, type: 3}
