@@ -21,6 +21,9 @@ public class GameManager : MonoBehaviour
     [Header("Settings")]
     public GameObject panelSetting;
 
+    [Header("PanelShow")]
+    public GameObject creditsPanel;
+
     private void Awake()
     {
         if (instance == null)
@@ -68,6 +71,11 @@ public class GameManager : MonoBehaviour
     void closePanel()
     {
         panelMenang.SetActive(false);
+    }
+
+    public void CloseCredits()
+    {
+        creditsPanel.SetActive(false);
     }
 
     public void goToAnotherScene(string scene)
