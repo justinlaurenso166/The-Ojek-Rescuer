@@ -3823,6 +3823,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Timer
       objectReference: {fileID: 0}
+    - target: {fileID: 4583886334617504615, guid: 653907abfd83ce54a873d44eabd81d33, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4583886334623489716, guid: 653907abfd83ce54a873d44eabd81d33, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.13515885
@@ -3854,6 +3858,10 @@ PrefabInstance:
     - target: {fileID: 4583886334991378381, guid: 653907abfd83ce54a873d44eabd81d33, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 422.99997
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583886334991378382, guid: 653907abfd83ce54a873d44eabd81d33, type: 3}
+      propertyPath: maxTime
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 653907abfd83ce54a873d44eabd81d33, type: 3}
