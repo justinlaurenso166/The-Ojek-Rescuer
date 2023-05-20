@@ -7,7 +7,7 @@ public class DontDestroyOnLoad : MonoBehaviour
 {
     private void Awake()
     {
-
+        AudioListener.volume = 0.3f;
         GameObject[] objs = GameObject.FindGameObjectsWithTag("Music");
 
         if (objs.Length > 1)

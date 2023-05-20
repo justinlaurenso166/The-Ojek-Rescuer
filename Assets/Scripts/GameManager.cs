@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour
         if (score == 3)
         {
             Time.timeScale = 0;
+            AudioListener.pause = true;
             panelMenang.SetActive(true);
         }
 

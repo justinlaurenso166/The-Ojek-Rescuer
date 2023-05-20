@@ -1055,8 +1055,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1383324960}
   m_HandleRect: {fileID: 1383324959}
   m_Direction: 2
-  m_Value: 0.99999267
-  m_Size: 0.7192818
+  m_Value: 0.9999929
+  m_Size: 0.71928173
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1553,7 +1553,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1042f9b20bc696640903ef324f55e95d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4871120de6939c3488763234f378b245, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2795,10 +2795,32 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Muhammad Nabil Usman\nHafizh Adzin\nFrans Joddy Sutjianto\n Muhammad Reza
-    Saputa\nErwinpras Wijaya\nJustin Laurenso\nFelix Kurnia Salim\nMatthew George
-    Wellson\nRifansyah Aditya Mahendra\nAkbarsyah Nashrullah\nSuci Aliyah Putri\nFatwa
-    Arsyi Barokah"
+  m_text: 'Muhammad Nabil Usman
+
+    Hafizh Adzin
+
+    Frans Joddy Sutjianto
+
+    Muhammad
+    Reza Saputa
+
+    Erwinpras Wijaya
+
+    Justin Laurenso
+
+    Felix Kurnia Salim
+
+    Matthew
+    George Wellson
+
+    Rifansyah Aditya Mahendra
+
+    Akbarsyah Nashrullah
+
+    Suci
+    Aliyah Putri
+
+    Fatwa Arsyi Barokah'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2807,8 +2829,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
