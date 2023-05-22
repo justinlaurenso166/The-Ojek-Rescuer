@@ -23,6 +23,7 @@ public class Timer : MonoBehaviour
             timeLeft -= Time.deltaTime;
             uiImage.fillAmount = timeLeft / maxTime;
         }else{
+            Time.timeScale = 0f;
             GameManager.GetInstance().timeOver();
         }
     }
