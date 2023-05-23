@@ -14,15 +14,8 @@ public class fpsCamera : MonoBehaviour {
 
     private void Awake()
     {
-        //LockCursor();
         limit = 0.0f;
     }
-
-
-    //private void LockCursor()
-    //{
-    //    CursorGameObject.lockState = CursorLockMode.Locked;
-    //}
 
     private void Update()
     {
