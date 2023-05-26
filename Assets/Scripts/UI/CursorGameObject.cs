@@ -33,6 +33,7 @@ public class CursorGameObject : MonoBehaviour
 
     private void HideCursor()
     {
+        Debug.Log("Hide");
         Cursor.visible = false; // Menyembunyikan tampilan kursor mouse
         Cursor.lockState = CursorLockMode.Locked; // Mengunci posisi kursor mouse di tengah layar
         isCursorHidden = true; // Menandakan bahwa kursor disembunyikan
@@ -40,6 +41,7 @@ public class CursorGameObject : MonoBehaviour
 
     private void ShowCursor()
     {
+        Debug.Log("Show");
         Cursor.visible = true; // Menampilkan tampilan kursor mouse
         Cursor.lockState = CursorLockMode.None; // Membebaskan posisi kursor mouse
         isCursorHidden = false; // Menandakan bahwa kursor ditampilkan
