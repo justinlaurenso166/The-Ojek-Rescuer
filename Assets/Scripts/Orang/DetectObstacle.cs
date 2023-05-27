@@ -2,36 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RaycastCheck : MonoBehaviour
+public class DetectObstacle : MonoBehaviour
 {
-    public string targetObjectName = "Target"; // Nama gameobject target yang ingin dideteksi
+    public Vector3 boxHalfExtents;
+    public float maxDistance;
+    public LayerMask layerMask;
+
     public Transform targetDestination;
-    public float raycastDistance = 5f; // Jarak raycast
-    public float speed = 5f;
-    public float rotateSpeed = 1.0f;
-    public LayerMask layerMask; // Layer yang akan diperiksa
+    public float speed = 3f;
+    public float rotateSpeed = 1f;
 
     [Header("Waypoints")]
     public List<GameObject> waypoints;
     private int currentWaypointIndex = 0;
 
-    private void Update()
+    void Update()
     {
-        // Membuat raycast ke depan
-        Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
+        bool isHit = Physics.BoxCast(transform.position, boxHalfExtents, transform.forward, out hit, transform.rotation, maxDistance, layerMask);
 
-        // Mengecek apakah raycast mengenai gameobject dengan nama yang diinginkan
-        bool hitTarget = Physics.Raycast(ray, out hit, raycastDistance, layerMask) && hit.collider.gameObject.name == targetObjectName;
-
-        // Menggambar garis raycast di Editor Unity
-        Debug.DrawRay(ray.origin, ray.direction * raycastDistance, hitTarget ? Color.green : Color.red);
-
-        // Menggunakan nilai hitTarget sesuai kebutuhan
-        if (hitTarget)
+        // Jika boxcast mendeteksi collider
+        // Jika tidak maka korban akan bergerak ke titik waypoints
+        if (isHit)
         {
-            Debug.Log("Hasil: True");
-            // Lakukan tindakan jika gameobject target terdeteksi
+            Debug.Log("BoxCast hit: " + hit.collider.name);
+            // Jika collider yang dideteksi memiliki tag "Exit" maka gameobject didestroy
+            if (hit.collider.CompareTag("Exit"))
+            {
+                GameManager.score++;
+                Destroy(gameObject);
+            }
+            
+        }
+        else
+        {
             // Mengambil posisi dari setiap waypoints dan bergerak ke posisi tersebut
             Vector3 destination = waypoints[currentWaypointIndex].transform.position;
             Vector3 newPos = Vector3.MoveTowards(transform.position, destination, speed * Time.deltaTime);
@@ -59,20 +63,14 @@ public class RaycastCheck : MonoBehaviour
                 }
             }
         }
-        else
-        {
-            Debug.Log("Hasil: False");
-            // Lakukan tindakan jika gameobject target tidak terdeteksi
-        }
     }
 
-    // Jika korban telah sampai ke tujuan (dalam hal ini gameobject dengan tag "Exit"), gameobject akan didestroy
-    private void OnTriggerEnter(Collider other)
+    void OnDrawGizmos()
     {
-        if (other.CompareTag("Exit"))
-        {
-            GameManager.score++;
-            Destroy(gameObject);
-        }
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(transform.position + transform.forward * maxDistance, boxHalfExtents * 2);
+        //Gizmos.DrawWireCube(transform.position + -transform.forward * maxDistance, boxHalfExtents * 2);
+        //Gizmos.DrawWireCube(transform.position + transform.right * maxDistance, boxHalfExtents * 2);
+        //Gizmos.DrawWireCube(transform.position + -transform.right * maxDistance, boxHalfExtents * 2);
     }
 }

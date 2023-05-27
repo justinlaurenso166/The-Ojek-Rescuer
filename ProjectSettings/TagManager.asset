@@ -7,17 +7,18 @@ TagManager:
   - Pallet
   - Music
   - Orang
+  - Exit
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Forklift
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Wall
+  - Obstacle
+  - Korban
+  - Exit
   - 
   - 
   - 
