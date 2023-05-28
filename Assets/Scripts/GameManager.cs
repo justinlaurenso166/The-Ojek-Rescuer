@@ -12,7 +12,9 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
 
     [Header("Panel Game Selesai")]
-    public GameObject panelMenang;
+    public GameObject panelMenangBintang1;
+    public GameObject panelMenangBintang2;
+    public GameObject panelMenangBintang3;
     public GameObject panelKalah;
 
     [Header("Game Menu")]
@@ -55,7 +57,7 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 0;
             AudioListener.pause = true;
-            panelMenang.SetActive(true);
+            panelMenangBintang3.SetActive(true);
         }
 
         if (Input.GetKeyDown(KeyCode.N))
@@ -71,7 +73,9 @@ public class GameManager : MonoBehaviour
 
     void closePanel()
     {
-        panelMenang.SetActive(false);
+        panelMenangBintang1.SetActive(false);
+        panelMenangBintang2.SetActive(false);
+        panelMenangBintang3.SetActive(false);
     }
 
     public void CloseCredits()
@@ -105,6 +109,19 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0f;
         AudioListener.pause = true;
-        panelKalah.SetActive(true);
+
+        if (score == 1)
+        {
+            panelMenangBintang1.SetActive(true);
+        }
+        else if (score == 2)
+        {
+            panelMenangBintang2.SetActive(true);
+        }
+        else if (score == 0)
+        {
+            panelKalah.SetActive(true);
+
+        }
     }
 }
