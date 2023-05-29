@@ -67,12 +67,4 @@ public class RaycastCheck : MonoBehaviour
     }
 
     // Jika korban telah sampai ke tujuan (dalam hal ini gameobject dengan tag "Exit"), gameobject akan didestroy
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Exit"))
-        {
-            GameManager.score++;
-            Destroy(gameObject);
-        }
-    }
 }
