@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 7686516191545952543}
   - component: {fileID: 7686516191545952542}
   - component: {fileID: 2638223871408343217}
-  m_Layer: 0
+  - component: {fileID: 8712621472881153713}
+  m_Layer: 10
   m_Name: Effect APAR
-  m_TagString: Untagged
+  m_TagString: FireExtinguisher
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3787,7 +3788,7 @@ ParticleSystem:
     radiusScale: 0.1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 2147483647
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -4826,7 +4827,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1d549eb73ba07e468749ce45e6d529c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleSystem: {fileID: 7686516191545952543}
+--- !u!114 &8712621472881153713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7686516191545952541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 011476c196989044e841338da107eea1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  extinguishRate: 1
+  raycastOrigin: {fileID: 7686516191545952536}
+  steamObject: {fileID: 1735024089641582, guid: 378b2c30ef426554495292cb902cb8f4, type: 3}
 --- !u!1 &7686516191912347636
 GameObject:
   m_ObjectHideFlags: 0
@@ -4838,9 +4853,9 @@ GameObject:
   - component: {fileID: 7686516191912347639}
   - component: {fileID: 7686516191912347637}
   - component: {fileID: 7686516191912347638}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SubEmitter0
-  m_TagString: Untagged
+  m_TagString: FireExtinguisher
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

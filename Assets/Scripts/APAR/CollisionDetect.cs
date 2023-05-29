@@ -6,7 +6,7 @@ public class CollisionDetect : MonoBehaviour
 {
     void OnParticleCollision(GameObject other)
     {
-        Debug.Log(other.gameObject.name);
+        // Debug.Log(other.gameObject.name);
     }
 
 }

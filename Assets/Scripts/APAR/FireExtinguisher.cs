@@ -23,6 +23,9 @@ public class FireExtinguisher : MonoBehaviour
     bool spawnEffect = false;
     private GameObject instantiateApar;
     bool isMouseDown = false;
+    public BoxCollider boxCollider1;
+    public BoxCollider boxCollider2;
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -64,11 +67,12 @@ public class FireExtinguisher : MonoBehaviour
             player.SetActive(false);
             playerCamera.SetActive(false);
             canUseText.SetActive(false);
-            aparCamera.SetActive(true);
+            // aparCamera.SetActive(true);
             playerFPSCamera.SetActive(true);
             enter = true;
             GetComponent<Renderer>().enabled = false;
-            GetComponent<BoxCollider>().enabled = false;
+            boxCollider1.enabled = false;
+            boxCollider2.enabled = false;
         }
 
         if (enter == true)
