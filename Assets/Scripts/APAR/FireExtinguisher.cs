@@ -22,6 +22,7 @@ public class FireExtinguisher : MonoBehaviour
     bool enter = false;
     bool spawnEffect = false;
     private GameObject instantiateApar;
+    bool isMouseDown = false;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -47,6 +48,17 @@ public class FireExtinguisher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            isMouseDown = true;
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            isMouseDown = false;
+        }
+
         if (canEnter == true && Input.GetKeyDown(KeyCode.F) && enter == false)
         {
             player.SetActive(false);
@@ -62,13 +74,13 @@ public class FireExtinguisher : MonoBehaviour
         if (enter == true)
         {
             changeAparVfxPosition();
-            if (Input.GetKeyDown(KeyCode.K) && spawnEffect == false)
+            if (isMouseDown && spawnEffect == false)
             {
                 vfxAPAR.SetActive(true);
                 instantiateApar = Instantiate(vfxAPAR, new Vector3(position.position.x, position.position.y, position.position.z), Quaternion.Euler(30f, 120f, position.transform.rotation.z));
                 spawnEffect = true;
             }
-            if (Input.GetKeyUp(KeyCode.L) && spawnEffect == true)
+            if (!isMouseDown && spawnEffect == true)
             {
                 Destroy(instantiateApar);
                 spawnEffect = false;
