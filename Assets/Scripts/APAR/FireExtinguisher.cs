@@ -10,7 +10,6 @@ public class FireExtinguisher : MonoBehaviour
     public GameObject playerFPSCamera;
 
     public GameObject aparCamera;
-    public GameObject aparControllerScript;
 
     [Header("UI elements")]
     public GameObject canUseText;
@@ -26,6 +25,8 @@ public class FireExtinguisher : MonoBehaviour
     public BoxCollider boxCollider1;
     public BoxCollider boxCollider2;
 
+    public Transform exitPosition;
+    public Transform currentAparPosition;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -67,7 +68,6 @@ public class FireExtinguisher : MonoBehaviour
             player.SetActive(false);
             playerCamera.SetActive(false);
             canUseText.SetActive(false);
-            // aparCamera.SetActive(true);
             playerFPSCamera.SetActive(true);
             enter = true;
             GetComponent<Renderer>().enabled = false;
@@ -90,6 +90,22 @@ public class FireExtinguisher : MonoBehaviour
                 spawnEffect = false;
             }
         }
+
+        if (enter == true && Input.GetKeyDown(KeyCode.Z))
+        {
+            this.gameObject.transform.position = currentAparPosition.position;
+            player.transform.position = exitPosition.position;
+            playerFPSCamera.SetActive(false);
+            player.SetActive(true);
+            playerCamera.SetActive(true);
+            enter = false;
+            GetComponent<Renderer>().enabled = true;
+            boxCollider1.enabled = true;
+            boxCollider2.enabled = true;
+            canUseText.SetActive(false);
+        }
+
+        this.transform.position = currentAparPosition.position;
     }
 
     void changeAparVfxPosition()

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Extinguisher : MonoBehaviour
 {
-    [SerializeField] private float extinguishRate = 1.0f; //amount of fire extinguished per second
+    [SerializeField] private float extinguishRate = 0.5f; //amount of fire extinguished per second
 
     [SerializeField] private Transform raycastOrigin = null;
 
