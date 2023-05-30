@@ -28,9 +28,9 @@ public class Fire : MonoBehaviour
 
     private void OnParticleCollision(GameObject other) {
         Debug.Log(other.gameObject.name);
-        if(other.gameObject.tag == "FireExtinguisher"){
-            Debug.Log("APARRR");
-        }
+        // if(other.gameObject.tag == "FireExtinguisher"){
+        //     Debug.Log("APARRR");
+        // }
     }
 
     private void Update()
