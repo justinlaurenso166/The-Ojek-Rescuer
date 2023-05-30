@@ -16,6 +16,7 @@ public class FireExtinguisher : MonoBehaviour
     public GameObject canUseText;
 
     public GameObject vfxAPAR;
+    public ParticleSystem fireParticleSystem;
     public Transform position;
 
     bool canEnter = false;
@@ -83,9 +84,12 @@ public class FireExtinguisher : MonoBehaviour
                 vfxAPAR.SetActive(true);
                 instantiateApar = Instantiate(vfxAPAR, new Vector3(position.position.x, position.position.y, position.position.z), Quaternion.Euler(30f, 120f, position.transform.rotation.z));
                 spawnEffect = true;
+
+                fireParticleSystem.Stop();
             }
             if (!isMouseDown && spawnEffect == true)
             {
+                vfxAPAR.SetActive(false);
                 Destroy(instantiateApar);
                 spawnEffect = false;
             }
