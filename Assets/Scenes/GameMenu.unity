@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1055,8 +1055,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1383324960}
   m_HandleRect: {fileID: 1383324959}
   m_Direction: 2
-  m_Value: 0.9999924
-  m_Size: 0.71928173
+  m_Value: 0.99999267
+  m_Size: 0.7192817
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2230,8 +2230,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 384, y: 247}
-  m_SizeDelta: {x: 263, y: 250}
+  m_AnchoredPosition: {x: 380.9, y: 226.1}
+  m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1464768224
 MonoBehaviour:
@@ -2309,7 +2309,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8a1c098d4b74724479ec6bcb7b0fd880, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 53604ce82c9b79e438cbc2be6ae608b6, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2440,8 +2440,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2484, y: 1607}
-  m_SizeDelta: {x: 263, y: 250}
+  m_AnchoredPosition: {x: 2338, y: 1479}
+  m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1562934846
 MonoBehaviour:
@@ -2519,7 +2519,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8a1c098d4b74724479ec6bcb7b0fd880, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 53604ce82c9b79e438cbc2be6ae608b6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
