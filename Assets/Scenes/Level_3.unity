@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1228,7 +1228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 54058468900187090, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 400
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
@@ -1431,7 +1431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 54058468900187090, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 54058468900187090, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
       propertyPath: m_Constraints
@@ -1841,7 +1841,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 54058468900187090, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 54058468900187090, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
       propertyPath: m_Constraints
@@ -2310,7 +2310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 54058468900187090, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 400
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
@@ -2804,11 +2804,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8605351856876364739, guid: ee70facee4f7d0942b93a7e5379e156a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.24
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 8605351856876364739, guid: ee70facee4f7d0942b93a7e5379e156a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.90000015
+      value: 0.27
       objectReference: {fileID: 0}
     - target: {fileID: 8605351856876364739, guid: ee70facee4f7d0942b93a7e5379e156a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3319,7 +3319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 54058468900187090, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 400
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
@@ -4942,7 +4942,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 54058468900187090, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 400
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
@@ -5000,7 +5000,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 54058468900187090, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 54058468900187090, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
       propertyPath: m_Constraints
@@ -5587,6 +5587,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8548019789838093339, guid: 16dab19377c92a24094b03e41616887e, type: 3}
+      propertyPath: m_Mass
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 8656683283686413377, guid: 16dab19377c92a24094b03e41616887e, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -6128,7 +6132,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 54058468900187090, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 400
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
@@ -6186,7 +6190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 54058468900187090, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 54058468900187090, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
       propertyPath: m_Constraints
@@ -6736,7 +6740,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 54058468900187090, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 400
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
@@ -6896,7 +6900,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 54058468900187090, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 54058468900187090, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
       propertyPath: m_Constraints
@@ -7341,7 +7345,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1404774659
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7395,7 +7399,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: PRESS F TO ENTER
+  m_Text: PRESS F TO USE
 --- !u!222 &1404774661
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7950,7 +7954,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 54058468900187090, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 400
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
@@ -9907,7 +9911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 54058468900187090, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 400
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
@@ -10123,7 +10127,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 54058468900187090, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 54058468900187090, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
       propertyPath: m_Constraints
@@ -10963,7 +10967,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 54058468900187090, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 400
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
@@ -11000,12 +11004,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27bead6e0e03e0f49b267936dcc5c8f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  playerCamera: {fileID: 0}
+  player: {fileID: 71941783}
+  playerCamera: {fileID: 71941783}
   playerFPSCamera: {fileID: 2627496142787827522}
   aparCamera: {fileID: 751710584926489854}
   aparControllerScript: {fileID: 0}
-  canUseText: {fileID: 0}
+  canUseText: {fileID: 1404774658}
   vfxAPAR: {fileID: 7686516191545952541, guid: 2065cd9dc7f8b6345b8475670557ec27, type: 3}
   position: {fileID: 581512063}
   boxCollider1: {fileID: 2087073440}
@@ -11216,7 +11220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 54058468900187090, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 54058468900187090, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
       propertyPath: m_Constraints
@@ -11278,7 +11282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 54058468900187090, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 54058468900187090, guid: 4f35d7d005380c046bc609e69d07ed5a, type: 3}
       propertyPath: m_Constraints
@@ -11692,15 +11696,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4069710148229330347, guid: d151d661a25e88343985357a946969f7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.2
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 4069710148229330347, guid: d151d661a25e88343985357a946969f7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.12
+      value: -0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069710148229330347, guid: d151d661a25e88343985357a946969f7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.98
       objectReference: {fileID: 0}
     - target: {fileID: 4226831305514197803, guid: d151d661a25e88343985357a946969f7, type: 3}
       propertyPath: CollisionModule.enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4226831305514197803, guid: d151d661a25e88343985357a946969f7, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4227556362377073354, guid: d151d661a25e88343985357a946969f7, type: 3}
       propertyPath: CollisionModule.type
