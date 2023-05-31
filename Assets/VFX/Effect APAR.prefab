@@ -4839,7 +4839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 011476c196989044e841338da107eea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  extinguishRate: 1
+  extinguishRate: 0.5
   raycastOrigin: {fileID: 7686516191545952536}
   steamObject: {fileID: 1735024089641582, guid: 378b2c30ef426554495292cb902cb8f4, type: 3}
 --- !u!1 &7686516191912347636
