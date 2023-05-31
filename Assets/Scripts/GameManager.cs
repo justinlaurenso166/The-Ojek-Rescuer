@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Time.timeScale = 1;
+        Time.timeScale = 1f;
         AudioListener.pause = false;
         score = 0;
     }
@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
 
         if (score == 3)
         {
-            Time.timeScale = 0;
+            Time.timeScale = 0f;
             AudioListener.pause = true;
             panelMenangBintang3.SetActive(true);
         }
