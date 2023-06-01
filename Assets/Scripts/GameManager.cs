@@ -90,14 +90,14 @@ public class GameManager : MonoBehaviour
 
     public void openSetting()
     {
-        panelMenu.SetActive(false);
+        if(panelMenu != null) panelMenu.SetActive(false);
         panelSetting.SetActive(true);
     }
 
     public void closeSetting()
     {
         panelSetting.SetActive(false);
-        panelMenu.SetActive(true);
+        if(panelMenu != null) panelMenu.SetActive(true);
     }
 
     public void retryGame()
