@@ -51,6 +51,31 @@ public class DetectObstacle : MonoBehaviour
         }
         else
         {
+            StartCoroutine(DelayedRaycastCheck(3f));
+        }
+    }
+
+    IEnumerator DelayedRaycastCheck(float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+
+        RaycastHit hit;
+        isHit = Physics.BoxCast(transform.position, boxHalfExtents, transform.forward, out hit, transform.rotation, maxDistance, layerMask);
+
+        if (isHit)
+        {
+            // Handle the raycast hit
+            targetAnimator.SetFloat("verticalMove", 0.1f, 0.1f, Time.deltaTime);
+            Debug.Log("BoxCast hit: " + hit.collider.name);
+
+            if (hit.collider.CompareTag("Exit"))
+            {
+                GameManager.score++;
+                Destroy(gameObject);
+            }
+        }
+        else
+        {
             // Mengambil posisi dari setiap waypoints dan bergerak ke posisi tersebut
             if (targetAnimator != null)
             {
