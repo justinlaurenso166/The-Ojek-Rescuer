@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class FireExtinguisher : MonoBehaviour
 {
@@ -27,6 +28,9 @@ public class FireExtinguisher : MonoBehaviour
 
     public Transform exitPosition;
     public Transform currentAparPosition;
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -71,7 +75,7 @@ public class FireExtinguisher : MonoBehaviour
             playerFPSCamera.SetActive(true);
             enter = true;
             GetComponent<Renderer>().enabled = false;
-            boxCollider1.enabled = false;
+            boxCollider1.enabled = false;   
             boxCollider2.enabled = false;
         }
 
@@ -83,11 +87,14 @@ public class FireExtinguisher : MonoBehaviour
                 vfxAPAR.SetActive(true);
                 instantiateApar = Instantiate(vfxAPAR, new Vector3(position.position.x, position.position.y, position.position.z), Quaternion.Euler(30f, 120f, position.transform.rotation.z));
                 spawnEffect = true;
+                audioSource.clip = audioClip;
+                audioSource.Play();
             }
             if (!isMouseDown && spawnEffect == true)
             {
                 Destroy(instantiateApar);
                 spawnEffect = false;
+                audioSource.Stop();
             }
         }
 

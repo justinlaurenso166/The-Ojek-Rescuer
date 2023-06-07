@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18084835, g: 0.22197548, b: 0.28166205, a: 1}
+  m_IndirectSpecularColor: {r: 0.18083239, g: 0.22194532, b: 0.28158945, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5799,7 +5799,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh36010
+  m_Name: pb_Mesh25046
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24815,10 +24815,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1233870643}
     m_Modifications:
-    - target: {fileID: 2520474722860724520, guid: 90d7ed1fa8cd6d042965513538c9873d, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2520474723202368876, guid: 90d7ed1fa8cd6d042965513538c9873d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -24910,10 +24906,6 @@ PrefabInstance:
     - target: {fileID: 2520474724601658443, guid: 90d7ed1fa8cd6d042965513538c9873d, type: 3}
       propertyPath: m_Name
       value: Option Panel
-      objectReference: {fileID: 0}
-    - target: {fileID: 2520474724601658443, guid: 90d7ed1fa8cd6d042965513538c9873d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90d7ed1fa8cd6d042965513538c9873d, type: 3}
