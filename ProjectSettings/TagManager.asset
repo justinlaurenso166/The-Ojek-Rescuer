@@ -11,6 +11,7 @@ TagManager:
   - Ground
   - Fire
   - FireExtinguisher
+  - Forklif
   layers:
   - Default
   - TransparentFX

@@ -15,16 +15,34 @@ public class DetectObstacle : MonoBehaviour
     [Header("Waypoints")]
     public List<GameObject> waypoints;
     private int currentWaypointIndex = 0;
+    Animator targetAnimator;
+    float moveAmount;
+    private bool isHit;
+
+    void Start()
+    {
+        if (GetComponent<Animator>() != null)
+        {
+            targetAnimator = GetComponent<Animator>();
+        }
+    }
 
     void Update()
     {
         RaycastHit hit;
-        bool isHit = Physics.BoxCast(transform.position, boxHalfExtents, transform.forward, out hit, transform.rotation, maxDistance, layerMask);
+        isHit = Physics.BoxCast(transform.position, boxHalfExtents, transform.forward, out hit, transform.rotation, maxDistance, layerMask);
 
         // Jika boxcast mendeteksi collider
         // Jika tidak maka korban akan bergerak ke titik waypoints
         if (isHit)
         {
+            if (hit.collider.tag != "Forklif")
+            {
+                if (targetAnimator != null)
+                {
+                    targetAnimator.SetFloat("verticalMove", 0f, 0.1f, Time.deltaTime);
+                }
+            }
             Debug.Log("BoxCast hit: " + hit.collider.name);
             // Jika collider yang dideteksi memiliki tag "Exit" maka gameobject didestroy
             if (hit.collider.CompareTag("Exit"))
@@ -32,11 +50,15 @@ public class DetectObstacle : MonoBehaviour
                 GameManager.score++;
                 Destroy(gameObject);
             }
-            
+
         }
         else
         {
-            // Mengambil posisi dari setiap waypoints dan bergerak ke posisi tersebut
+            if (targetAnimator != null)
+            {
+                targetAnimator.SetFloat("verticalMove", 1f, 0.1f, Time.deltaTime);
+            }
+
             Vector3 destination = waypoints[currentWaypointIndex].transform.position;
             Vector3 newPos = Vector3.MoveTowards(transform.position, destination, speed * Time.deltaTime);
             transform.position = newPos;
@@ -65,9 +87,10 @@ public class DetectObstacle : MonoBehaviour
         }
     }
 
+
     void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
+        Gizmos.color = isHit ? Color.green : Color.red;
         Gizmos.DrawWireCube(transform.position + transform.forward * maxDistance, boxHalfExtents * 2);
         //Gizmos.DrawWireCube(transform.position + -transform.forward * maxDistance, boxHalfExtents * 2);
         //Gizmos.DrawWireCube(transform.position + transform.right * maxDistance, boxHalfExtents * 2);

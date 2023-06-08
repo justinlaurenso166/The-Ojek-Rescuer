@@ -9,8 +9,8 @@ public class Fire : MonoBehaviour
 
     private float[] startIntensities = new float[0];
     float nextRegenTime = 0;
-    [SerializeField] private float regenDelay = 2.5f;
-    [SerializeField] private float regenRate = .1f;
+    [SerializeField] private float regenDelay = 1f;
+    [SerializeField] private float regenRate = .3f;
 
     [SerializeField] private ParticleSystem[] fireParticleSystems = new ParticleSystem[0];
 
@@ -28,9 +28,9 @@ public class Fire : MonoBehaviour
 
     private void OnParticleCollision(GameObject other) {
         Debug.Log(other.gameObject.name);
-        if(other.gameObject.tag == "FireExtinguisher"){
-            Debug.Log("APARRR");
-        }
+        // if(other.gameObject.tag == "FireExtinguisher"){
+        //     Debug.Log("APARRR");
+        // }
     }
 
     private void Update()

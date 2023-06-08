@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Time.timeScale = 1;
+        Time.timeScale = 1f;
         AudioListener.pause = false;
         score = 0;
     }
@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
 
         if (score == 3)
         {
-            Time.timeScale = 0;
+            Time.timeScale = 0f;
             AudioListener.pause = true;
             panelMenangBintang3.SetActive(true);
         }
@@ -90,14 +90,14 @@ public class GameManager : MonoBehaviour
 
     public void openSetting()
     {
-        panelMenu.SetActive(false);
+        if(panelMenu != null) panelMenu.SetActive(false);
         panelSetting.SetActive(true);
     }
 
     public void closeSetting()
     {
         panelSetting.SetActive(false);
-        panelMenu.SetActive(true);
+        if(panelMenu != null) panelMenu.SetActive(true);
     }
 
     public void retryGame()
@@ -123,5 +123,9 @@ public class GameManager : MonoBehaviour
             panelKalah.SetActive(true);
 
         }
+    }
+
+    public void exitGame(){
+        Application.Quit();
     }
 }
