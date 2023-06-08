@@ -22,6 +22,7 @@ public class SplashScreen : MonoBehaviour
         yield return new WaitForSeconds(2.5f);
         FadeOut(splashImage2);
         yield return new WaitForSeconds(2f);
+        
         SceneManager.LoadScene("GameMenu");
     }
 

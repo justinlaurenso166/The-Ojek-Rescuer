@@ -36,9 +36,12 @@ public class DetectObstacle : MonoBehaviour
         // Jika tidak maka korban akan bergerak ke titik waypoints
         if (isHit)
         {
-            if (targetAnimator != null)
+            if (hit.collider.tag != "Forklif")
             {
-                targetAnimator.SetFloat("verticalMove", 0f, 0.1f, Time.deltaTime);
+                if (targetAnimator != null)
+                {
+                    targetAnimator.SetFloat("verticalMove", 0f, 0.1f, Time.deltaTime);
+                }
             }
             Debug.Log("BoxCast hit: " + hit.collider.name);
             // Jika collider yang dideteksi memiliki tag "Exit" maka gameobject didestroy
