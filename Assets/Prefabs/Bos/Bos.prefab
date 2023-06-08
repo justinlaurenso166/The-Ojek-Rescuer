@@ -1210,7 +1210,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8987580186733358632}
   - component: {fileID: 3062034634751171320}
-  - component: {fileID: 1389061961493628380}
   m_Layer: 8
   m_Name: Tops
   m_TagString: Orang
@@ -1304,27 +1303,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.008180082, y: 0.33885294, z: -0.05500348}
     m_Extent: {x: 1.2661676, y: 0.67455155, z: 0.420945}
   m_DirtyAABB: 0
---- !u!114 &1389061961493628380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3492477794758395748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eeed49b8298dc404aa1a2d530c8bbb92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boxHalfExtents: {x: 0, y: 0, z: 0}
-  maxDistance: 0
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  targetDestination: {fileID: 0}
-  speed: 3
-  rotateSpeed: 1
-  waypoints: []
 --- !u!1 &3505345514614279740
 GameObject:
   m_ObjectHideFlags: 0

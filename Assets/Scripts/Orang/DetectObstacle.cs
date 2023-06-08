@@ -19,12 +19,14 @@ public class DetectObstacle : MonoBehaviour
     float moveAmount;
     private bool isHit;
 
+    private void Awake()
+    {
+        targetAnimator = GetComponent<Animator>();
+    }
+
     void Start()
     {
-        if (GetComponent<Animator>() != null)
-        {
-            targetAnimator = GetComponent<Animator>();
-        }
+
     }
 
     void Update()
@@ -36,13 +38,15 @@ public class DetectObstacle : MonoBehaviour
         // Jika tidak maka korban akan bergerak ke titik waypoints
         if (isHit)
         {
-            if (hit.collider.tag != "Forklif")
+            if (hit.collider.tag == "Forklift" || hit.collider.tag == "Fire")
             {
-                if (targetAnimator != null)
-                {
-                    targetAnimator.SetFloat("verticalMove", 0f, 0.1f, Time.deltaTime);
-                }
+                targetAnimator.SetBool("isRunning", false);
             }
+            else if (hit.collider.tag == "Obstacle")
+            {
+                targetAnimator.SetBool("isWaving", true);
+            }
+            
             Debug.Log("BoxCast hit: " + hit.collider.name);
             // Jika collider yang dideteksi memiliki tag "Exit" maka gameobject didestroy
             if (hit.collider.CompareTag("Exit"))
@@ -54,10 +58,8 @@ public class DetectObstacle : MonoBehaviour
         }
         else
         {
-            if (targetAnimator != null)
-            {
-                targetAnimator.SetFloat("verticalMove", 1f, 0.1f, Time.deltaTime);
-            }
+            targetAnimator.SetBool("isWaving", false);
+            targetAnimator.SetBool("isRunning", true);
 
             Vector3 destination = waypoints[currentWaypointIndex].transform.position;
             Vector3 newPos = Vector3.MoveTowards(transform.position, destination, speed * Time.deltaTime);
