@@ -72,6 +72,7 @@ public class Fire : MonoBehaviour
         isLit = false;
         enabled = false;
         GetComponent<BoxCollider>().enabled = false;
+        GameManager.score++;
     }
 
     private void ChangeIntensity()
