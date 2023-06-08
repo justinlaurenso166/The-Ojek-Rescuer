@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Fire : MonoBehaviour
 {
@@ -72,7 +73,10 @@ public class Fire : MonoBehaviour
         isLit = false;
         enabled = false;
         GetComponent<BoxCollider>().enabled = false;
-        GameManager.score++;
+        if (SceneManager.GetActiveScene().name == "TutorialAPAR")
+        {
+            GameManager.score++;
+        }
     }
 
     private void ChangeIntensity()

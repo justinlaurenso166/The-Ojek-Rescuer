@@ -11,7 +11,8 @@ TagManager:
   - Ground
   - Fire
   - FireExtinguisher
-  - Forklif
+  - Obstacle
+  - Forklift
   layers:
   - Default
   - TransparentFX
