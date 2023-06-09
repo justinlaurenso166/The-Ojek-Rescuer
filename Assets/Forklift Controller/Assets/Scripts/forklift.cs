@@ -55,6 +55,9 @@ public class forklift : MonoBehaviour
     bool enter = false;
     float maxPositionY = 3.5f;
 
+    public AudioClip audioClip;
+    public AudioSource audioSource;
+
     //when the player is close to the forklift
     private void OnTriggerEnter(Collider other)
     {
@@ -216,6 +219,7 @@ public class forklift : MonoBehaviour
     private void UpdateWheelPoses()
     {
         //update wheels position
+        // Debug.Log("JALAN");
         UpdateWheelPose(frontR, frontRightT);
         UpdateWheelPose(frontL, frontLeftT);
         UpdateWheelPose(rearL, rearLeftT);
@@ -224,6 +228,8 @@ public class forklift : MonoBehaviour
 
     private void UpdateWheelPose(WheelCollider _collider, Transform _transform)
     {
+        // audioSource.clip = audioClip;
+        // audioSource.Play();
         //makes the whhels turn to the same speed as the wheel collider
         Vector3 _pos = _transform.position;
         Quaternion _quat = _transform.rotation;
