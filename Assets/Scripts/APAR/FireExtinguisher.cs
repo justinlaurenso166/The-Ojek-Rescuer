@@ -100,6 +100,7 @@ public class FireExtinguisher : MonoBehaviour
 
         if (enter == true && Input.GetKeyDown(KeyCode.Z))
         {
+            // canUseText.SetActive(false);
             this.gameObject.transform.position = currentAparPosition.position;
             player.transform.position = exitPosition.position;
             playerFPSCamera.SetActive(false);
@@ -109,7 +110,6 @@ public class FireExtinguisher : MonoBehaviour
             GetComponent<Renderer>().enabled = true;
             boxCollider1.enabled = true;
             boxCollider2.enabled = true;
-            canUseText.SetActive(false);
         }
 
         this.transform.position = currentAparPosition.position;
