@@ -69,13 +69,13 @@ public class FireExtinguisher : MonoBehaviour
 
         if (canEnter == true && Input.GetKeyDown(KeyCode.F) && enter == false)
         {
+            canUseText.SetActive(false);
             player.SetActive(false);
             playerCamera.SetActive(false);
-            canUseText.SetActive(false);
             playerFPSCamera.SetActive(true);
             enter = true;
             GetComponent<Renderer>().enabled = false;
-            boxCollider1.enabled = false;   
+            boxCollider1.enabled = false;
             boxCollider2.enabled = false;
         }
 

@@ -26,6 +26,9 @@ public class GameManager : MonoBehaviour
     [Header("PanelShow")]
     public GameObject creditsPanel;
 
+    [Header("PanelKeyBindings")]
+    public GameObject keyBindingsPanel;
+
     private void Awake()
     {
         if (instance == null)
@@ -90,14 +93,14 @@ public class GameManager : MonoBehaviour
 
     public void openSetting()
     {
-        if(panelMenu != null) panelMenu.SetActive(false);
+        if (panelMenu != null) panelMenu.SetActive(false);
         panelSetting.SetActive(true);
     }
 
     public void closeSetting()
     {
         panelSetting.SetActive(false);
-        if(panelMenu != null) panelMenu.SetActive(true);
+        if (panelMenu != null) panelMenu.SetActive(true);
     }
 
     public void retryGame()
@@ -125,7 +128,20 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void exitGame(){
+    public void openKeyBindings()
+    {
+        panelSetting.SetActive(false);
+        keyBindingsPanel.SetActive(true);
+    }
+
+    public void closeKeyBindings()
+    {
+        keyBindingsPanel.SetActive(false);
+        panelSetting.SetActive(true);
+    }
+
+    public void exitGame()
+    {
         Application.Quit();
     }
 }
