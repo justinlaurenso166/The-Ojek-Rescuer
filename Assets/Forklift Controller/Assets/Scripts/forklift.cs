@@ -55,7 +55,9 @@ public class forklift : MonoBehaviour
     bool enter = false;
     float maxPositionY = 3.5f;
 
-    public AudioClip audioClip;
+    public AudioClip audioClipMesinHidup;
+    public AudioClip audioClipMesinIdle;
+    public AudioClip audioClipMesinJalan;
     public AudioSource audioSource;
 
     //when the player is close to the forklift
@@ -96,6 +98,9 @@ public class forklift : MonoBehaviour
         {
             //then enter the forklift
             //FPS.SetActive(false);
+            audioSource.clip = audioClipMesinHidup;
+            audioSource.Play();
+            audioSource.loop = false;
             player.SetActive(false);
             playerCamera.SetActive(false);
             cameraInteriorForklift.SetActive(true);
@@ -110,6 +115,26 @@ public class forklift : MonoBehaviour
         if (enter == false) return;
 
         currentSpeed = rb.velocity.magnitude;
+
+        bool isMoving = currentSpeed > 0.1f;
+
+        // Play the appropriate audio clip based on whether the forklift is moving or idle
+        if (isMoving)
+        {
+            if (!audioSource.isPlaying || audioSource.clip != audioClipMesinJalan)
+            {
+                audioSource.clip = audioClipMesinJalan;
+                audioSource.Play();
+            }
+        }
+        else
+        {
+            if (!audioSource.isPlaying)
+            {
+                audioSource.clip = audioClipMesinIdle;
+                audioSource.Play();
+            }
+        }
 
         if (currentSpeed < maxSpeed)
         {
@@ -167,6 +192,7 @@ public class forklift : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z))
         {
             //exit the forklift
+            audioSource.Stop();
             inForkliftMenu.SetActive(false);
             enter = false;
             //FPS.transform.position = exitPosition.position;
