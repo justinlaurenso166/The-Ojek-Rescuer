@@ -98,7 +98,7 @@ public class FireExtinguisher : MonoBehaviour
             }
         }
 
-        if (enter == true && Input.GetKeyDown(KeyCode.Z))
+        if (enter == true && Input.GetKeyDown(KeyCode.C))
         {
             // canUseText.SetActive(false);
             this.gameObject.transform.position = currentAparPosition.position;
