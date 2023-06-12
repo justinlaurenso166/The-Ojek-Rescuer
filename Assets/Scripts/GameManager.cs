@@ -40,6 +40,8 @@ public class GameManager : MonoBehaviour
     public Button level3Button;
     public Button level3Panel;
 
+    private Color interactableColor = Color.white;
+
     private void Awake()
     {
         if (instance == null)
@@ -73,40 +75,56 @@ public class GameManager : MonoBehaviour
             AudioListener.pause = true;
             panelMenangBintang3.SetActive(true);
 
-            if(SceneManager.GetActiveScene().name == "Level_1")
+            if (SceneManager.GetActiveScene().name == "Level_1")
             {
                 doneLevel1 = true;
             }
-            if(SceneManager.GetActiveScene().name == "Level_2")
+            if (SceneManager.GetActiveScene().name == "Level_2")
             {
                 doneLevel2 = true;
             }
         }
 
-        // if (Input.GetKeyDown(KeyCode.N))
-        // {
-        //     score = 3;
-        // }
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            score = 3;
+        }
 
         if (doneLevel1 == false)
         {
             level2Button.interactable = false;
+            Image buttonImage = level2Panel.GetComponent<Image>();
+            Color color;
+            if (ColorUtility.TryParseHtmlString("#9A9A9A", out color))
+            {
+                buttonImage.color = color;
+            }
         }
 
         if (doneLevel2 == false)
         {
 
             level3Button.interactable = false;
+            Image buttonImage = level3Panel.GetComponent<Image>();
+            Color color;
+            if (ColorUtility.TryParseHtmlString("#9A9A9A", out color))
+            {
+                buttonImage.color = color;
+            }
         }
 
         if (doneLevel1 == true)
         {
             level2Button.interactable = true;
+            Image buttonImage = level2Panel.GetComponent<Image>();
+            buttonImage.color = interactableColor;
         }
 
         if (doneLevel2 == true)
         {
             level3Button.interactable = true;
+            Image buttonImage = level3Panel.GetComponent<Image>();
+            buttonImage.color = interactableColor;
         }
     }
 
