@@ -43,9 +43,8 @@ public class forklift : MonoBehaviour
     [Header("KeyCodes")]
     public KeyCode upGearKey = KeyCode.E;
     public KeyCode downGearKey = KeyCode.Q;
-    public KeyCode changeCameraKey = KeyCode.C;
-    public KeyCode upLoaderKey = KeyCode.O;
-    public KeyCode downLoaderKey = KeyCode.L;
+    public KeyCode upLoaderKey = KeyCode.R;
+    public KeyCode downLoaderKey = KeyCode.F;
 
     public GameObject speedometer;
 
@@ -174,13 +173,13 @@ public class forklift : MonoBehaviour
         steeringWheel.transform.localEulerAngles = new Vector3(53f, 0f, rearL.steerAngle * 6);
 
         //up the loader
-        if (Input.GetKey(upLoaderKey) && loader.position.y < maxPositionY)
+        if (Input.GetKey(KeyCode.R) && loader.position.y < maxPositionY)
         {
             loader.Translate(new Vector3(0f, 1f, 0f) * Time.deltaTime);
         }
 
         //down the loader
-        if (Input.GetKey(downLoaderKey) && loader.position.y > 0)
+        if (Input.GetKey(KeyCode.F) && loader.position.y > 0)
         {
             loader.Translate(new Vector3(0f, -1f, 0f) * Time.deltaTime);
         }
@@ -189,7 +188,7 @@ public class forklift : MonoBehaviour
         UpdateWheelPoses();
 
         //if press Z key
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.C))
         {
             //exit the forklift
             audioSource.Stop();
@@ -219,20 +218,6 @@ public class forklift : MonoBehaviour
             if (currentGear > -1)
             {
                 currentGear--;
-            }
-        }
-
-        if (Input.GetKeyDown(changeCameraKey))
-        {
-            if (cameraInteriorForklift.activeSelf)
-            {
-                cameraInteriorForklift.SetActive(false);
-                cameraExteriorForklift.SetActive(true);
-            }
-            else
-            {
-                cameraInteriorForklift.SetActive(true);
-                cameraExteriorForklift.SetActive(false);
             }
         }
 

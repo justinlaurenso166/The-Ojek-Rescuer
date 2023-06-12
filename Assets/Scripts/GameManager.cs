@@ -29,6 +29,17 @@ public class GameManager : MonoBehaviour
     [Header("PanelKeyBindings")]
     public GameObject keyBindingsPanel;
 
+    public static bool doneLevel1 = false;
+    public static bool doneLevel2 = false;
+
+    [Header("Level 2")]
+    public Button level2Button;
+    public Button level2Panel;
+
+    [Header("Level 3")]
+    public Button level3Button;
+    public Button level3Panel;
+
     private void Awake()
     {
         if (instance == null)
@@ -61,11 +72,41 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0f;
             AudioListener.pause = true;
             panelMenangBintang3.SetActive(true);
+
+            if(SceneManager.GetActiveScene().name == "Level_1")
+            {
+                doneLevel1 = true;
+            }
+            if(SceneManager.GetActiveScene().name == "Level_2")
+            {
+                doneLevel2 = true;
+            }
         }
 
-        if (Input.GetKeyDown(KeyCode.N))
+        // if (Input.GetKeyDown(KeyCode.N))
+        // {
+        //     score = 3;
+        // }
+
+        if (doneLevel1 == false)
         {
-            score = 3;
+            level2Button.interactable = false;
+        }
+
+        if (doneLevel2 == false)
+        {
+
+            level3Button.interactable = false;
+        }
+
+        if (doneLevel1 == true)
+        {
+            level2Button.interactable = true;
+        }
+
+        if (doneLevel2 == true)
+        {
+            level3Button.interactable = true;
         }
     }
 
@@ -144,4 +185,5 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
+
 }

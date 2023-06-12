@@ -16,10 +16,10 @@ public class PausePanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            PauseGame();
-        }
+        // if (Input.GetKeyDown(KeyCode.Escape))
+        // {
+        //     PauseGame();
+        // }
     }
 
     // Method untuk mengaktifkan panel pause dan menghentikan waktu

@@ -3121,6 +3121,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4096632464881652053, guid: 9980d30e010a9e848b18af5c7ce3068f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2133408514}
+    - target: {fileID: 4096632464881652053, guid: 9980d30e010a9e848b18af5c7ce3068f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: retryGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096632464881652053, guid: 9980d30e010a9e848b18af5c7ce3068f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9980d30e010a9e848b18af5c7ce3068f, type: 3}
 --- !u!224 &788203630 stripped
@@ -9290,6 +9302,10 @@ MonoBehaviour:
   panelSetting: {fileID: 2025783740}
   creditsPanel: {fileID: 0}
   keyBindingsPanel: {fileID: 1725928538}
+  level2Button: {fileID: 0}
+  level2Panel: {fileID: 0}
+  level3Button: {fileID: 0}
+  level3Panel: {fileID: 0}
 --- !u!4 &2133408515
 Transform:
   m_ObjectHideFlags: 0
