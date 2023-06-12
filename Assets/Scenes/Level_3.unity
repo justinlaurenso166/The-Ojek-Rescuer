@@ -22083,7 +22083,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayText: {fileID: 1000710403}
   displayTime: 5
-  text: Selamatkan 3 orang yang terjebak
+  text: Selamatkan 4 orang yang terjebak
 --- !u!114 &1000710403
 MonoBehaviour:
   m_ObjectHideFlags: 0

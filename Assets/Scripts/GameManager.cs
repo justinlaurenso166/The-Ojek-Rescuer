@@ -70,26 +70,31 @@ public class GameManager : MonoBehaviour
             scoreText.text = score.ToString();
         }
 
-        if (score == Target)
+        if (score != 0)
         {
-            Time.timeScale = 0f;
-            AudioListener.pause = true;
-            panelMenangBintang3.SetActive(true);
+            if (score == Target)
+            {
+                Time.timeScale = 0f;
+                AudioListener.pause = true;
+                panelMenangBintang3.SetActive(true);
 
-            if (SceneManager.GetActiveScene().name == "Level_1")
-            {
-                doneLevel1 = true;
+                if (SceneManager.GetActiveScene().name == "Level_1")
+                {
+                    doneLevel1 = true;
+                }
+                if (SceneManager.GetActiveScene().name == "Level_2")
+                {
+                    doneLevel2 = true;
+                }
             }
-            if (SceneManager.GetActiveScene().name == "Level_2")
-            {
-                doneLevel2 = true;
-            }
+
         }
 
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            score = 3;
-        }
+
+        // if (Input.GetKeyDown(KeyCode.N))
+        // {
+        //     score = 3;
+        // }
 
         if (level2Button != null && level2Panel != null)
         {
