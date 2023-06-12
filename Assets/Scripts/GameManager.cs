@@ -90,41 +90,48 @@ public class GameManager : MonoBehaviour
             score = 3;
         }
 
-        if (doneLevel1 == false)
+        if (level2Button != null && level2Panel != null)
         {
-            level2Button.interactable = false;
-            Image buttonImage = level2Panel.GetComponent<Image>();
-            Color color;
-            if (ColorUtility.TryParseHtmlString("#9A9A9A", out color))
+            if (doneLevel1 == false)
             {
-                buttonImage.color = color;
+                level2Button.interactable = false;
+                Image buttonImage = level2Panel.GetComponent<Image>();
+                Color color;
+                if (ColorUtility.TryParseHtmlString("#9A9A9A", out color))
+                {
+                    buttonImage.color = color;
+                }
             }
-        }
 
-        if (doneLevel2 == false)
-        {
-
-            level3Button.interactable = false;
-            Image buttonImage = level3Panel.GetComponent<Image>();
-            Color color;
-            if (ColorUtility.TryParseHtmlString("#9A9A9A", out color))
+            if (doneLevel1 == true)
             {
-                buttonImage.color = color;
+                level2Button.interactable = true;
+                Image buttonImage = level2Panel.GetComponent<Image>();
+                buttonImage.color = interactableColor;
             }
+
         }
 
-        if (doneLevel1 == true)
+        if (level3Button != null && level3Panel != null)
         {
-            level2Button.interactable = true;
-            Image buttonImage = level2Panel.GetComponent<Image>();
-            buttonImage.color = interactableColor;
-        }
+            if (doneLevel2 == false)
+            {
 
-        if (doneLevel2 == true)
-        {
-            level3Button.interactable = true;
-            Image buttonImage = level3Panel.GetComponent<Image>();
-            buttonImage.color = interactableColor;
+                level3Button.interactable = false;
+                Image buttonImage = level3Panel.GetComponent<Image>();
+                Color color;
+                if (ColorUtility.TryParseHtmlString("#9A9A9A", out color))
+                {
+                    buttonImage.color = color;
+                }
+            }
+
+            if (doneLevel2 == true)
+            {
+                level3Button.interactable = true;
+                Image buttonImage = level3Panel.GetComponent<Image>();
+                buttonImage.color = interactableColor;
+            }
         }
     }
 
