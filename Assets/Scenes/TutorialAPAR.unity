@@ -2574,7 +2574,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayText: {fileID: 681862661}
   displayTime: 5
-  text: Letakkan 3 Pallet ke atas rak
+  text: Padamkan 3 pallet yang terbakar
 --- !u!114 &681862661
 MonoBehaviour:
   m_ObjectHideFlags: 0
