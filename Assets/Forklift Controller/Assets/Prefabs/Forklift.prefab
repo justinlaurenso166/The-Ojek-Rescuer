@@ -436,8 +436,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 90, y: 665.0328, z: 244.09666}
-  m_Center: {x: 0, y: 345.96472, z: -34.431847}
+  m_Size: {x: 90, y: 321.0282, z: 244.09666}
+  m_Center: {x: 0, y: 173.96246, z: -34.431847}
 --- !u!114 &1278931920556643330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -478,7 +478,6 @@ MonoBehaviour:
   maxSpeed: 10
   upGearKey: 101
   downGearKey: 113
-  changeCameraKey: 99
   upLoaderKey: 111
   downLoaderKey: 108
   speedometer: {fileID: 0}

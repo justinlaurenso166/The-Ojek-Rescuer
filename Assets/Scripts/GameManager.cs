@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
     public Button level3Panel;
 
     private Color interactableColor = Color.white;
+    public int Target;
 
     private void Awake()
     {
@@ -69,7 +70,7 @@ public class GameManager : MonoBehaviour
             scoreText.text = score.ToString();
         }
 
-        if (score == 3)
+        if (score == Target)
         {
             Time.timeScale = 0f;
             AudioListener.pause = true;
