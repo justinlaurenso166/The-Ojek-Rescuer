@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18077067, g: 0.22629525, b: 0.30717754, a: 1}
+  m_IndirectSpecularColor: {r: 0.18077067, g: 0.22629526, b: 0.30717754, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19438,7 +19438,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh36614
+  m_Name: pb_Mesh314238
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -23587,6 +23587,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6304873336195134682, guid: da73d4acdf4997943a7eae7299abbcd3, type: 3}
   m_PrefabInstance: {fileID: 2082676318}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2085922247 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1106347244414334, guid: ed13746adbc09de49b06da991031a713, type: 3}
+  m_PrefabInstance: {fileID: 1683520748}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2085922248
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085922247}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.4865627, y: 1.0835264, z: 1.8652017}
+  m_Center: {x: -1.422854, y: 4.0743217, z: -0.43260154}
 --- !u!1001 &2088533043
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24543,11 +24561,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7406081010697271548, guid: 16dab19377c92a24094b03e41616887e, type: 3}
       propertyPath: m_Size.x
-      value: 94.586876
+      value: 94.58688
       objectReference: {fileID: 0}
     - target: {fileID: 7406081010697271548, guid: 16dab19377c92a24094b03e41616887e, type: 3}
       propertyPath: m_Size.y
-      value: 273.67108
+      value: 555.7708
       objectReference: {fileID: 0}
     - target: {fileID: 7406081010697271548, guid: 16dab19377c92a24094b03e41616887e, type: 3}
       propertyPath: m_Size.z
@@ -24559,7 +24577,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7406081010697271548, guid: 16dab19377c92a24094b03e41616887e, type: 3}
       propertyPath: m_Center.y
-      value: 143.64798
+      value: 284.6979
       objectReference: {fileID: 0}
     - target: {fileID: 7406081010697271548, guid: 16dab19377c92a24094b03e41616887e, type: 3}
       propertyPath: m_Center.z
