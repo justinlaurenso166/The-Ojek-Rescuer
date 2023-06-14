@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PausePanel : MonoBehaviour
 {
@@ -23,6 +24,11 @@ public class PausePanel : MonoBehaviour
         }
 
         if (Input.GetKey(KeyCode.H))
+        {
+            guide.OpenGuide();
+        }
+
+        if (SceneManager.GetActiveScene().name == "Tutorial" || SceneManager.GetActiveScene().name == "TutorialAPAR")
         {
             guide.OpenGuide();
         }

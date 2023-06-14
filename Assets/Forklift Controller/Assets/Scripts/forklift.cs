@@ -192,7 +192,7 @@ public class forklift : MonoBehaviour
         }
 
         //down the loader
-        if (Input.GetKey(KeyCode.F) && loader.position.y > 0)
+        if (Input.GetKey(KeyCode.F) && loader.position.y > 0.001f)
         {
             loader.Translate(new Vector3(0f, -1f, 0f) * Time.deltaTime);
         }

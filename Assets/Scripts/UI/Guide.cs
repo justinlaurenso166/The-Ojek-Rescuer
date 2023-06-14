@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Guide : MonoBehaviour
 {
@@ -132,27 +133,27 @@ public class Guide : MonoBehaviour
     {
         if (currentPage == 1)
         {
-            stringTitle = "KARAKTER";
+            stringTitle = "CHARACTER";
             stringPage = "1 / 4";
-            stringText = "Anda dapat berjalan menggunakan tombol WASD dan gerakkan mouse Anda untuk menggerakkan kamera.";
+            stringText = "You can walk using WASD key button and move your mouse to look around.";
         }
         else if (currentPage == 2)
         {
             stringTitle = "FORKLIFT";
             stringPage = "2 / 4";
-            stringText = "Anda dapat menggunakan forklift dengan menekan tombol F. Anda dapat menaikkan gigi forklift dengan menekan tombol E, dan tombol Q untuk menurunkan gigi. Saat menggunakan forklift, gigi 1 berarti Anda bisa berjalan maju, gigi -1 berarti Anda bisa berjalan mundur, dan gigi 0 forklift tidak dapat bergerak.";
+            stringText = "You can use the forklift by pressing F key button. You can upshift the forklift by pressing E key button, and the Q key button to downshift. When using a forklift, gear 1 indicates you can move forward, gear -1 indicates you can move backward, and gear 0 forklift cannot be moved.";
         }
         else if (currentPage == 3)
         {
-            stringTitle = "GARPU FORKLIFT";
+            stringTitle = "FORKLIFT FORK";
             stringPage = "3 / 4";
-            stringText = "Anda dapat menaikkan garpu forklift menggunakan tombol tombol R, dan menurunkan garpu forklift menggunakan tombol tombol F. Untuk keluar dari forklift menggunakan tombol C.";
+            stringText = "You can raise the fork using R key button, and lower the fork using F key button. To get off the forklift using C key button.";
         }
         else if (currentPage == 4)
         {
-            stringTitle = "ALAT PEMADAM API";
+            stringTitle = "FIRE EXTINGUISHER";
             stringPage = "4 / 4";
-            stringText = "Anda dapat menggunakan alat pemadam api dengan menekan tombol tombol F. Untuk menyemprot alat pemadam api dengan menekan tombol klik kiri mouse. Kegunaan seluruh tombol Anda dapat lihat pada keybinds dalam menu option.";
+            stringText = "You can use the fire extinguisher by pressing F key button. To spray the fire extinguisher by pressing left click mouse button.";
         }
     }
 }

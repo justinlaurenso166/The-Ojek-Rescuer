@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
     public GameObject panelMenangBintang1;
     public GameObject panelMenangBintang2;
     public GameObject panelMenangBintang3;
+    public GameObject panelSelesaiTutorial;
+    public GameObject panelSelesaiLevel;
+    public GameObject panelLevelKalah;
     public GameObject panelKalah;
 
     [Header("Game Menu")]
@@ -76,7 +79,17 @@ public class GameManager : MonoBehaviour
             {
                 Time.timeScale = 0f;
                 AudioListener.pause = true;
-                panelMenangBintang3.SetActive(true);
+
+                if (SceneManager.GetActiveScene().name == "Tutorial" || SceneManager.GetActiveScene().name == "TutorialAPAR")
+                {
+                    if (panelSelesaiTutorial != null) panelSelesaiTutorial.SetActive(true);
+                }
+                else
+                {
+                    if (panelSelesaiLevel != null) panelSelesaiLevel.SetActive(true);
+                }
+
+                // panelMenangBintang3.SetActive(true);
 
                 if (SceneManager.GetActiveScene().name == "Level_1")
                 {
@@ -91,10 +104,10 @@ public class GameManager : MonoBehaviour
         }
 
 
-        // if (Input.GetKeyDown(KeyCode.N))
-        // {
-        //     score = 3;
-        // }
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            score = 3;
+        }
 
         if (level2Button != null && level2Panel != null)
         {
@@ -185,19 +198,20 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
         AudioListener.pause = true;
 
-        if (score == 1)
-        {
-            panelMenangBintang1.SetActive(true);
-        }
-        else if (score == 2)
-        {
-            panelMenangBintang2.SetActive(true);
-        }
-        else if (score == 0)
-        {
-            panelKalah.SetActive(true);
+        // if (score == 1)
+        // {
+        //     panelMenangBintang1.SetActive(true);
+        // }
+        // else if (score == 2)
+        // {
+        //     panelMenangBintang2.SetActive(true);
+        // }
+        // else if (score == 0)
+        // {
+        //     panelKalah.SetActive(true);
+        // }
 
-        }
+        panelLevelKalah.SetActive(true);
     }
 
     public void openKeyBindings()
