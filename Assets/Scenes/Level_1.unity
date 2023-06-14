@@ -7568,7 +7568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayText: {fileID: 456805010}
   displayTime: 5
-  text: Selamatkan 3 orang yang terjebak
+  text: Rescue 3 people who are trapped
 --- !u!114 &456805010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7591,8 +7591,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7db18b4253e733a4b9a48575236a17d1, type: 2}
+  m_sharedMaterial: {fileID: 4262496506268606547, guid: 7db18b4253e733a4b9a48575236a17d1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -23379,6 +23379,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 358457152}
     m_Modifications:
+    - target: {fileID: 99008559021782254, guid: 92140c8279b330240b316648102dbea2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 170.99988
+      objectReference: {fileID: 0}
+    - target: {fileID: 99008559021782255, guid: 92140c8279b330240b316648102dbea2, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: beb76d93aa49c3f49ba8d4efa18f41bd, type: 2}
+    - target: {fileID: 99008559021782255, guid: 92140c8279b330240b316648102dbea2, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3028964347844756023, guid: beb76d93aa49c3f49ba8d4efa18f41bd, type: 2}
+    - target: {fileID: 99008559049014648, guid: 92140c8279b330240b316648102dbea2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -88
+      objectReference: {fileID: 0}
+    - target: {fileID: 99008559049014649, guid: 92140c8279b330240b316648102dbea2, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: beb76d93aa49c3f49ba8d4efa18f41bd, type: 2}
+    - target: {fileID: 99008559049014649, guid: 92140c8279b330240b316648102dbea2, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3028964347844756023, guid: beb76d93aa49c3f49ba8d4efa18f41bd, type: 2}
+    - target: {fileID: 99008560905485072, guid: 92140c8279b330240b316648102dbea2, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: beb76d93aa49c3f49ba8d4efa18f41bd, type: 2}
+    - target: {fileID: 99008560905485072, guid: 92140c8279b330240b316648102dbea2, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3028964347844756023, guid: beb76d93aa49c3f49ba8d4efa18f41bd, type: 2}
+    - target: {fileID: 99008560905485075, guid: 92140c8279b330240b316648102dbea2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -290.0001
+      objectReference: {fileID: 0}
     - target: {fileID: 5726693331782053370, guid: 92140c8279b330240b316648102dbea2, type: 3}
       propertyPath: m_Name
       value: Target
@@ -29798,12 +29834,36 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2026019561107320980, guid: 1eaef0252bc6cd14aac3305a64d2d12c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026019561107320980, guid: 1eaef0252bc6cd14aac3305a64d2d12c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1843965536}
+      objectReference: {fileID: 2133408514}
     - target: {fileID: 2026019561107320980, guid: 1eaef0252bc6cd14aac3305a64d2d12c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: closeKeyBindings
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026019561107320980, guid: 1eaef0252bc6cd14aac3305a64d2d12c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6484340810298223206, guid: 1eaef0252bc6cd14aac3305a64d2d12c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6484340810298223206, guid: 1eaef0252bc6cd14aac3305a64d2d12c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2133408514}
+    - target: {fileID: 6484340810298223206, guid: 1eaef0252bc6cd14aac3305a64d2d12c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: closeKeyBindings
+      objectReference: {fileID: 0}
+    - target: {fileID: 6484340810298223206, guid: 1eaef0252bc6cd14aac3305a64d2d12c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1eaef0252bc6cd14aac3305a64d2d12c, type: 3}

@@ -13,6 +13,11 @@ public class PausePanel : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         objectivee = objective;
+
+        if (SceneManager.GetActiveScene().name == "Tutorial" || SceneManager.GetActiveScene().name == "TutorialAPAR")
+        {
+            guide.OpenGuide();
+        }
     }
 
     // Update is called once per frame
@@ -28,10 +33,6 @@ public class PausePanel : MonoBehaviour
             guide.OpenGuide();
         }
 
-        if (SceneManager.GetActiveScene().name == "Tutorial" || SceneManager.GetActiveScene().name == "TutorialAPAR")
-        {
-            guide.OpenGuide();
-        }
     }
 
     // Method untuk mengaktifkan panel pause dan menghentikan waktu
