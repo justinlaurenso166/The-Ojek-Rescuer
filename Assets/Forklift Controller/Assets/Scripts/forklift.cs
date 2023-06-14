@@ -46,6 +46,10 @@ public class forklift : MonoBehaviour
     public KeyCode upLoaderKey = KeyCode.R;
     public KeyCode downLoaderKey = KeyCode.F;
 
+    [Header("Untuk Mobil Terbalik")]
+    public GameObject forkliftSpawner;
+    //public GameObject loaderSpawner;
+
     public GameObject speedometer;
 
     [Range(-1, 1)]
@@ -108,6 +112,15 @@ public class forklift : MonoBehaviour
             enter = true;
             speedometer.SetActive(true);
             inForkliftMenu.SetActive(true);
+        }
+
+        if (enter == true)
+        {
+            // Jika mobil terbalik, reset position
+            if (Input.GetKeyDown(KeyCode.Z))
+            {
+                ResetCarRotation();
+            }
         }
 
         //if is not enter, execute again the update method
@@ -248,5 +261,16 @@ public class forklift : MonoBehaviour
         _collider.GetWorldPose(out _pos, out _quat);
 
         _transform.rotation = _quat.normalized;
+    }
+
+    private void ResetCarRotation()
+    {
+        Debug.Log("Reset car position!");
+        //rigidbody.velocity = Vector3.zero;
+        //rigidbody.angularVelocity = Vector3.zero;
+        //transform.rotation = initialRotation;
+        gameObject.transform.position = forkliftSpawner.transform.position;
+        gameObject.transform.rotation = forkliftSpawner.transform.rotation;
+        //loader.transform.position = loaderSpawner.transform.position;
     }
 }
