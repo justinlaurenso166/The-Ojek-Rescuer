@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PausePanel : MonoBehaviour
 {
+    [SerializeField] private Guide guide;
     public GameObject pauseMenu; // Panel yang berisi menu pause
     public GameObject objective;
     public static GameObject objectivee;
@@ -16,15 +17,22 @@ public class PausePanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if (Input.GetKeyDown(KeyCode.Escape))
-        // {
-        //     PauseGame();
-        // }
+        if (Input.GetKeyDown(KeyCode.Escape) && !guide.gameObject.activeInHierarchy)
+        {
+            PauseGame();
+        }
+
+        if (Input.GetKey(KeyCode.H))
+        {
+            guide.OpenGuide();
+        }
     }
 
     // Method untuk mengaktifkan panel pause dan menghentikan waktu
     public void PauseGame()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0f; // Waktu dihentikan
         objective.SetActive(false);
         AudioListener.pause = true;

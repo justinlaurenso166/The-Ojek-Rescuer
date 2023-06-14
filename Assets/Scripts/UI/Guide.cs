@@ -23,8 +23,7 @@ public class Guide : MonoBehaviour
     [SerializeField] VideoPlayer videoGuide;
     [SerializeField] VideoClip[] videoClip;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         currentPage = 1;
         CheckCurrentPage();
@@ -33,9 +32,16 @@ public class Guide : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         if (guidePanel.activeInHierarchy)
         {
             Time.timeScale = 0;
+            if (Input.GetKey(KeyCode.Escape))
+            {
+                CloseGuide();
+            }
+
             if (currentPage == 1)
             {
 
@@ -97,15 +103,16 @@ public class Guide : MonoBehaviour
 
     public void OpenGuide()
     {
-        Time.timeScale = 0;
         Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        Time.timeScale = 0;
         guidePanel.SetActive(true);
     }
 
     public void CloseGuide()
     {
-        Time.timeScale = 1;
         Cursor.visible = false;
+        Time.timeScale = 1;
         guidePanel.SetActive(false);
     }
 
@@ -125,27 +132,27 @@ public class Guide : MonoBehaviour
     {
         if (currentPage == 1)
         {
-            stringTitle = "Character Movement";
+            stringTitle = "KARAKTER";
             stringPage = "1 / 4";
-            stringText = "Ini adalah Teks untuk page 1";
+            stringText = "Anda dapat berjalan menggunakan tombol WASD dan gerakkan mouse Anda untuk menggerakkan kamera.";
         }
         else if (currentPage == 2)
         {
-            stringTitle = "Forklift";
+            stringTitle = "FORKLIFT";
             stringPage = "2 / 4";
-            stringText = "Ini adalah Teks untuk page 2";
+            stringText = "Anda dapat menggunakan forklift dengan menekan tombol F. Anda dapat menaikkan gigi forklift dengan menekan tombol E, dan tombol Q untuk menurunkan gigi. Saat menggunakan forklift, gigi 1 berarti Anda bisa berjalan maju, gigi -1 berarti Anda bisa berjalan mundur, dan gigi 0 forklift tidak dapat bergerak.";
         }
         else if (currentPage == 3)
         {
-            stringTitle = "Using Fork";
+            stringTitle = "GARPU FORKLIFT";
             stringPage = "3 / 4";
-            stringText = "Ini adalah Teks untuk page 3";
+            stringText = "Anda dapat menaikkan garpu forklift menggunakan tombol tombol R, dan menurunkan garpu forklift menggunakan tombol tombol F. Untuk keluar dari forklift menggunakan tombol C.";
         }
         else if (currentPage == 4)
         {
-            stringTitle = "Fire Extinguisher";
+            stringTitle = "ALAT PEMADAM API";
             stringPage = "4 / 4";
-            stringText = "Ini adalah Teks untuk page 4";
+            stringText = "Anda dapat menggunakan alat pemadam api dengan menekan tombol tombol F. Untuk menyemprot alat pemadam api dengan menekan tombol klik kiri mouse. Kegunaan seluruh tombol Anda dapat lihat pada keybinds dalam menu option.";
         }
     }
 }

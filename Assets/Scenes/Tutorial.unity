@@ -4247,6 +4247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38205b2d70777ff4c9ab0f4fb58a52fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  guide: {fileID: 1700542057}
   pauseMenu: {fileID: 788203631}
   objective: {fileID: 681862658}
 --- !u!1001 &289732942
@@ -19438,7 +19439,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh36614
+  m_Name: pb_Mesh29650
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24243,6 +24244,10 @@ PrefabInstance:
       propertyPath: videoGuide
       value: 
       objectReference: {fileID: 1588349614}
+    - target: {fileID: 1028743136331193525, guid: e1024369c8048754b839805a81238e4d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1024369c8048754b839805a81238e4d, type: 3}
 --- !u!1001 &2225344145701336607

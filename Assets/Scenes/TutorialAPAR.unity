@@ -3918,6 +3918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38205b2d70777ff4c9ab0f4fb58a52fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  guide: {fileID: 1006218651}
   pauseMenu: {fileID: 788203631}
   objective: {fileID: 681862658}
 --- !u!1001 &301476962
@@ -13691,7 +13692,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1209090297
 Transform:
   m_ObjectHideFlags: 0
@@ -20298,7 +20299,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29908
+  m_Name: pb_Mesh45296
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
