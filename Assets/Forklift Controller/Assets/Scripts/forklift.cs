@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class forklift : MonoBehaviour
 {
@@ -62,6 +63,7 @@ public class forklift : MonoBehaviour
     public AudioClip audioClipMesinIdle;
     public AudioClip audioClipMesinJalan;
     public AudioSource audioSource;
+    public CameraForklift cameraForklift;
 
     //when the player is close to the forklift
     private void OnTriggerEnter(Collider other)
@@ -96,6 +98,14 @@ public class forklift : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.scoreTarget != 0)
+        {
+            if (GameManager.score == GameManager.scoreTarget)
+            {
+                cameraForklift.enabled = false;
+            }
+        }
+
         //if can enter and press F key and is not in
         if (canEnter == true && Input.GetKeyDown(KeyCode.F) && enter == false)
         {

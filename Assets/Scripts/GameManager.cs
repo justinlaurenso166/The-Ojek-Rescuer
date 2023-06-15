@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public static int score = 0;
+    public static int scoreTarget;
     public TextMeshProUGUI scoreText;
 
     [Header("Panel Game Selesai")]
@@ -45,9 +46,12 @@ public class GameManager : MonoBehaviour
 
     private Color interactableColor = Color.white;
     public int Target;
+    public CameraForklift cameraForklift;
 
     private void Awake()
     {
+        scoreTarget = Target;
+
         if (instance == null)
         {
             instance = this;
@@ -62,12 +66,15 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         AudioListener.pause = false;
+        scoreTarget = Target;
         score = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        scoreTarget = Target;
+
         if (scoreText != null)
         {
             scoreText.text = score.ToString();
@@ -99,6 +106,9 @@ public class GameManager : MonoBehaviour
                 {
                     doneLevel2 = true;
                 }
+
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
             }
 
         }
@@ -197,6 +207,13 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0f;
         AudioListener.pause = true;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
+        if(cameraForklift != null)
+        {
+            cameraForklift.enabled = false;
+        }
 
         // if (score == 1)
         // {
