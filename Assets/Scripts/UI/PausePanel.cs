@@ -41,7 +41,7 @@ public class PausePanel : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0f; // Waktu dihentikan
-        objective.SetActive(false);
+        // objective.SetActive(false);
         AudioListener.pause = true;
         pauseMenu.SetActive(true); // Panel pause aktif
     }

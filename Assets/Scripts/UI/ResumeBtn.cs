@@ -11,7 +11,7 @@ public class ResumeBtn : MonoBehaviour
         Cursor.visible = false;
         Time.timeScale = 1f; // Waktu dilanjutkan
         AudioListener.pause = false;
-        PausePanel.objectivee.SetActive(true);
+        // PausePanel.objectivee.SetActive(true);
         pauseMenu.SetActive(false); // Panel pause dinonaktifkan
     }
 }
