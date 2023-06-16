@@ -9792,7 +9792,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level_Selection
+          m_StringArgument: Cutscene1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &825050239
@@ -17166,6 +17166,7 @@ MonoBehaviour:
   level3Button: {fileID: 0}
   level3Panel: {fileID: 0}
   Target: 0
+  cameraForklift: {fileID: 0}
 --- !u!1001 &1328698483
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26030,7 +26031,7 @@ GameObject:
   - component: {fileID: 2096949677}
   - component: {fileID: 2096949676}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26774,9 +26775,37 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2026019561107320980, guid: 1eaef0252bc6cd14aac3305a64d2d12c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026019561107320980, guid: 1eaef0252bc6cd14aac3305a64d2d12c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1328155399}
+    - target: {fileID: 2026019561107320980, guid: 1eaef0252bc6cd14aac3305a64d2d12c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: closeKeyBindings
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026019561107320980, guid: 1eaef0252bc6cd14aac3305a64d2d12c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6484340810298223206, guid: 1eaef0252bc6cd14aac3305a64d2d12c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6484340810298223206, guid: 1eaef0252bc6cd14aac3305a64d2d12c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1328155399}
+    - target: {fileID: 6484340810298223206, guid: 1eaef0252bc6cd14aac3305a64d2d12c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: closeKeyBindings
+      objectReference: {fileID: 0}
+    - target: {fileID: 6484340810298223206, guid: 1eaef0252bc6cd14aac3305a64d2d12c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1eaef0252bc6cd14aac3305a64d2d12c, type: 3}
 --- !u!1001 &3867325442727631551

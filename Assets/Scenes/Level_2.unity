@@ -49058,7 +49058,7 @@ PrefabInstance:
     - target: {fileID: 4096632464881652053, guid: 9980d30e010a9e848b18af5c7ce3068f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1446190583}
     - target: {fileID: 4096632464881652053, guid: 9980d30e010a9e848b18af5c7ce3068f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: retryGame
@@ -66110,6 +66110,10 @@ PrefabInstance:
     - target: {fileID: 4221097312016615349, guid: 1b01df452ce42e8408ba4ad32559995f, type: 3}
       propertyPath: m_Name
       value: Panel Level Selesai
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221097312086119778, guid: 1b01df452ce42e8408ba4ad32559995f, type: 3}
+      propertyPath: sceneName
+      value: Level_3
       objectReference: {fileID: 0}
     - target: {fileID: 8453392880044242487, guid: 1b01df452ce42e8408ba4ad32559995f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
