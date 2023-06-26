@@ -122,7 +122,7 @@ SkinnedMeshRenderer:
   - {fileID: 2100000, guid: 07c9a5947c4c0d84495edd3b7c943f9c, type: 2}
   - {fileID: 2100000, guid: b8f2b93c73ea9694283193a65ccfe07d, type: 2}
   - {fileID: 2100000, guid: bebd5086222c1b44d88d97d02bea37d3, type: 2}
-  - {fileID: 2100000, guid: d447c884f0dc2e742900d3cc876322eb, type: 2}
+  - {fileID: 2100000, guid: 692e93b67e4dd5b49a8e174980dcf2bc, type: 2}
   - {fileID: 2100000, guid: a74754718a42f7848b5a1e8ff4f0b08c, type: 2}
   - {fileID: 2100000, guid: 7f4773fe077e22f4a9f58a1b649e6398, type: 2}
   - {fileID: 2100000, guid: c9e7453f7f21e6946a4ecb64b279c8ef, type: 2}
@@ -130,8 +130,8 @@ SkinnedMeshRenderer:
   - {fileID: 2100000, guid: f8af7123255d21846995203969be1184, type: 2}
   - {fileID: 2100000, guid: 3af58411b1c5ded40b8b371325602f3b, type: 2}
   - {fileID: 2100000, guid: e930e2870e6de124bb17afb86700825e, type: 2}
-  - {fileID: 2100000, guid: 4c85da90b425eba4285c392a72e8b4c8, type: 2}
-  - {fileID: 2100000, guid: 94433b2bed1031d4bb78bacfb7d3ce7c, type: 2}
+  - {fileID: 2100000, guid: 0c2abb0657fccc041a6b156d909a4643, type: 2}
+  - {fileID: 2100000, guid: 0c2abb0657fccc041a6b156d909a4643, type: 2}
   - {fileID: 2100000, guid: 3134adc4b53819f458254b024009888f, type: 2}
   - {fileID: 2100000, guid: b06c453a0649f5845a1f055fea4a5f12, type: 2}
   - {fileID: 2100000, guid: 6ccdcb29a919ea544917f837ee845f4a, type: 2}
